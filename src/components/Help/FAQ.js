@@ -55,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
   },
   textBody: {
     padding: "20px 0px",
-    fontFamily: "garamond",
+    fontFamily: "Antonio",
     fontSize: 18,
     marginTop: 5,
     lineHeight: 1.1,

@@ -117,6 +117,9 @@ const CoinsTable = () => {
       [theme.breakpoints.up("xs")]: {
         fontSize: "30px",
       },
+      [theme.breakpoints.up("sm")]: { fontSize: "35px" },
+      [theme.breakpoints.up("md")]: { fontSize: "40px" },
+      [theme.breakpoints.up("lg")]: { fontSize: "45px" },
     },
     priceColumn: {
       fontFamily: "antonio",
@@ -124,6 +127,8 @@ const CoinsTable = () => {
       [theme.breakpoints.up("xs")]: {
         fontSize: "14.5px",
       },
+      [theme.breakpoints.up("sm")]: { fontSize: "18px" },
+      [theme.breakpoints.up("md")]: { fontSize: "20px" },
       [theme.breakpoints.up("lg")]: { fontSize: "22px" },
     },
     dailyChangeColumn: {
@@ -133,6 +138,8 @@ const CoinsTable = () => {
       [theme.breakpoints.up("xs")]: {
         fontSize: "14.5px",
       },
+      [theme.breakpoints.up("sm")]: { fontSize: "18px" },
+      [theme.breakpoints.up("md")]: { fontSize: "20px" },
       [theme.breakpoints.up("lg")]: { fontSize: "22px" },
     },
     marketCapColumn: {
@@ -142,6 +149,8 @@ const CoinsTable = () => {
       [theme.breakpoints.up("xs")]: {
         fontSize: "14.5px",
       },
+      [theme.breakpoints.up("sm")]: { fontSize: "18px" },
+      [theme.breakpoints.up("md")]: { fontSize: "20px" },
       [theme.breakpoints.up("lg")]: { fontSize: "22px" },
     },
     contSearch: {

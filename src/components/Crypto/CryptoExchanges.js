@@ -70,6 +70,9 @@ const CryptoExchanges = () => {
       [theme.breakpoints.up("xs")]: {
         fontSize: "30px",
       },
+      [theme.breakpoints.up("sm")]: { fontSize: "35px" },
+      [theme.breakpoints.up("md")]: { fontSize: "40px" },
+      [theme.breakpoints.up("lg")]: { fontSize: "45px" },
     },
     pagination: {
       "& .MuiPaginationItem-root": {
