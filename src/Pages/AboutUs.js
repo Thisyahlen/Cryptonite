@@ -4,6 +4,7 @@ import logo from "../components/Cryptonite Logo.png";
 import LogoBanner from "../components/AboutUs/LogoBanner";
 import OurStory from "../components/AboutUs/OurStory";
 import BehindCryptonite from "../components/AboutUs/BehindCryptonite";
+import FormRating from "../components/Help/FormRating";
 
 const useStyles = makeStyles((theme) => ({
   // about: { scrollBehavior: "smooth" },
@@ -79,6 +80,7 @@ const AboutUs = () => {
         <div className={classes.ourStoryContainer}>
           <OurStory />
         </div>
+        <FormRating />
         <BehindCryptonite />
         <div className={classes.bottomLogoContainer}>
           <img src={logo} alt="logo" className={classes.bottomLogo} />

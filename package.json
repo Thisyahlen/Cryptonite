@@ -31,6 +31,7 @@
     "react-icons": "^4.3.1",
     "react-native-web": "^0.17.5",
     "react-paginate": "^8.1.2",
+    "react-request": "^3.2.0",
     "react-router-dom": "^6.2.1",
     "react-scripts": "^5.0.0",
     "react-slick": "^0.28.1",
