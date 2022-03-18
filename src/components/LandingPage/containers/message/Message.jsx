@@ -1,6 +1,10 @@
+//---------------------------------------------------------------------------
+//imports
 import React from "react";
 import "./message.css";
 
+//---------------------------------------------------------------------------
+//Message container structure
 const Message = () => (
   <div className="crypto__message" id="from-us">
     <div className="crypto__message-content">
@@ -26,4 +30,6 @@ const Message = () => (
   </div>
 );
 
+//---------------------------------------------------------------------------
+//export
 export default Message;

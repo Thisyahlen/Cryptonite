@@ -1,6 +1,10 @@
+//---------------------------------------------------------------------------
+//imports
 import React from "react";
-import Feature from "../../components/feature/Feature";
 import "./features.css";
+
+//---------------------------------------------------------------------------
+//Features container structure
 const Features = () => (
   <div className="crypto__feature" id="features">
     <div className="crypto__feature-box">
@@ -16,4 +20,6 @@ const Features = () => (
   </div>
 );
 
+//---------------------------------------------------------------------------
+//export
 export default Features;

@@ -1,14 +1,20 @@
+//---------------------------------------------------------------------------
+//imports
 import React from "react";
 import coins from "../../../../media/NicePng_cryptocurrency-png_1923799 2.png";
 import "./statistics.css";
 import { useNavigate } from "react-router-dom";
+
+//---------------------------------------------------------------------------
+//Statistics container structure
 const Statistics = () => {
+  //Variable
   const navigate = useNavigate();
 
   return (
     <div className="crypto__statistics section__padding" id="statistics">
       <div className="crypto__statistics-image">
-        <img src={coins} />
+        <img src={coins} alt="coinage" />
       </div>
       <div className="crypto__statistics-content">
         <p>
@@ -31,4 +37,6 @@ const Statistics = () => {
   );
 };
 
+//---------------------------------------------------------------------------
+//export
 export default Statistics;

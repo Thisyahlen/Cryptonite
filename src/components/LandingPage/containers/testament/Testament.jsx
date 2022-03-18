@@ -1,7 +1,11 @@
+//---------------------------------------------------------------------------
+//imports
 import React from "react";
 import "./testament.css";
 import customer from "../../../../media/lex Luthor.jpg";
-import logo from "../../../../media/Cryptonite Logo (Silver Coin).png";
+
+//---------------------------------------------------------------------------
+//Testament container structure
 const Testament = () => (
   <div className="crypto__testament section__padding" id="testament">
     <div className="crypto__testament-image ">
@@ -14,11 +18,9 @@ const Testament = () => (
         <h2>Lex Luthor</h2>
       </div>
     </div>
-
-    {/* <div className="crypto__testament-logo">
-      <img src={logo} alt="logo" />
-    </div> */}
   </div>
 );
 
+//---------------------------------------------------------------------------
+//export
 export default Testament;

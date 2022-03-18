@@ -1,17 +1,23 @@
-import { Snackbar } from '@material-ui/core'
-import MuiAlert from '@material-ui/lab/Alert'
-import { CryptoState } from '../CryptoContext'
+//---------------------------------------------------------------------------
+//imports
+import { Snackbar } from "@material-ui/core";
+import MuiAlert from "@material-ui/lab/Alert";
+import { CryptoState } from "../CryptoContext";
 
+//---------------------------------------------------------------------------
+//Alert component structure
 const Alert = () => {
-  const { alert, setAlert } = CryptoState()
+  //Variable and states
+  const { alert, setAlert } = CryptoState();
 
+  //Close alert function
   const handleCloseAlert = (event, reason) => {
-    if (reason === 'clickaway') {
-      return
+    if (reason === "clickaway") {
+      return;
     }
 
-    setAlert({ open: false })
-  }
+    setAlert({ open: false });
+  };
 
   return (
     <Snackbar
@@ -28,7 +34,9 @@ const Alert = () => {
         {alert.message}
       </MuiAlert>
     </Snackbar>
-  )
-}
+  );
+};
 
-export default Alert
+//---------------------------------------------------------------------------
+//export
+export default Alert;

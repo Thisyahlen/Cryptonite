@@ -1,3 +1,5 @@
+/* ------------------------------------------------------------------ */
+/* Statistics container structure */
 .crypto__statistics {
   display: flex;
   flex-direction: row;
@@ -5,7 +7,6 @@
   padding: 50px 40px;
 }
 .crypto__statistics-content {
-  /* background-color: aqua; */
   width: 40%;
   display: flex;
   margin-right: 100px;
@@ -14,7 +15,6 @@
   flex-direction: column;
 }
 .crypto__statistics-content p {
-  /* background-color: pink; */
   width: 80%;
   padding: 20px;
   margin: 0px 20px;
@@ -25,7 +25,6 @@
   color: black;
 }
 .crypto__statistics-content__input {
-  /* background-color: chartreuse; */
   width: 350px;
   justify-content: center;
   align-items: center;
@@ -66,25 +65,23 @@
   width: 90%;
 }
 /* --------------------------------------------------------------------- */
+/* ------------------------------------------------------------------ */
+/* Responsiveness */
 @media screen and (max-width: 1050px) {
   .crypto__statistics {
     flex-direction: column;
   }
   .crypto__statistics-content {
-    /* background-color: yellow; */
     width: 100%;
     margin-right: 0px;
   }
   .crypto__statistics-content p {
-    /* background-color: pink; */
-
     font-size: 25px;
     line-height: 25px;
   }
 }
 @media screen and (max-width: 1200px) {
   .crypto__statistics-content {
-    /* background-color: yellow; */
     margin-right: 0px;
   }
 }

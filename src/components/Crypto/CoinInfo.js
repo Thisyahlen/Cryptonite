@@ -1,3 +1,5 @@
+//---------------------------------------------------------------------------
+//imports
 import { useEffect, useState } from "react";
 import { Line } from "react-chartjs-2";
 import {
@@ -10,10 +12,15 @@ import {
 import "chart.js/auto";
 import { CryptoState } from "../../CryptoContext";
 
+//---------------------------------------------------------------------------
+//Coin info componenet structure
 const CoinInfo = ({ coin }) => {
+  //Variables and states
   const [historicData, setHistoricData] = useState();
   const [flag, setflag] = useState(false);
   const { currency, symbol } = CryptoState();
+
+  //Styling and states
   const useStyles = makeStyles((theme) => ({
     container: {
       marginBottom: 30,
@@ -31,6 +38,7 @@ const CoinInfo = ({ coin }) => {
 
   const classes = useStyles();
 
+  //theme for dark mode
   const darkTheme = createTheme({
     palette: {
       primary: {
@@ -233,8 +241,8 @@ const CoinInfo = ({ coin }) => {
                 textAlign: "center",
               }}
             >
-              Slow data update due to server maintenance. Please come back in a
-              while.
+              Slow data update due to server maintenance. Please come back after
+              a while.
             </Typography>
           );
         });
@@ -266,4 +274,6 @@ const CoinInfo = ({ coin }) => {
   );
 };
 
+//---------------------------------------------------------------------------
+//export
 export default CoinInfo;

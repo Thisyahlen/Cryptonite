@@ -1,10 +1,16 @@
+//---------------------------------------------------------------------------
+//imports
 import { Container, Typography } from "@material-ui/core";
 import React from "react";
 import Carousel from "./Carousel";
 import { useStyles } from "./trendStyle.js";
 
+//---------------------------------------------------------------------------
+//Banner component structure
 function Banner() {
+  //Variable
   const classes = useStyles();
+
   return (
     <div>
       <Container className={classes.bannerContent}>
@@ -25,4 +31,6 @@ function Banner() {
   );
 }
 
+//---------------------------------------------------------------------------
+//export
 export default Banner;

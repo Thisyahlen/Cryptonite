@@ -1,8 +1,14 @@
+//---------------------------------------------------------------------------
+//imports
 import React from "react";
 import "./header.css";
 import logo from "../../../../media/Cryptonite Title (Silver).png";
 import { useNavigate } from "react-router-dom";
+
+//---------------------------------------------------------------------------
+//Header container structure
 const Header = () => {
+  //Variable
   const navigate = useNavigate();
 
   return (
@@ -29,4 +35,6 @@ const Header = () => {
   );
 };
 
+//---------------------------------------------------------------------------
+//export
 export default Header;

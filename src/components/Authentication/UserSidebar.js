@@ -43,8 +43,14 @@ const useStyles = makeStyles((theme) => ({
     cursor: "pointer",
     backgroundColor: "white",
     boxShadow: "0px 2px 2px 1px #aaa",
+    [theme.breakpoints.down("lg")]: {
+      width: 50,
+    },
     [theme.breakpoints.down("sm")]: {
       marginRight: 0,
+    },
+    [theme.breakpoints.down("xs")]: {
+      width: "41%",
     },
   },
   picture: {
@@ -281,11 +287,11 @@ export default function UserSidebar() {
                 </span>
                 {/* ------------------------------------------------------- */}
                 {/* Favourite details */}
-                {coins.map((coin) => {
+                {coins.map((coin, i) => {
                   if (favoriteslist.includes(coin.id))
                     return (
                       // Card container
-                      <div className={classes.coin}>
+                      <div className={classes.coin} key={i}>
                         {/* Coin image */}
                         <div
                           style={{

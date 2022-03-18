@@ -1,6 +1,7 @@
 /* --------------------------------------------------------------------- */
+/* ------------------------------------------------------------------ */
+/* News container and component structure*/
 .newsContContainer {
-  /* background-color: darkkhaki; */
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -8,7 +9,6 @@
   align-items: center;
 }
 .newsContainer {
-  /* background-color: chartreuse; */
   width: 1280px;
   display: flex;
   flex-direction: column;
@@ -16,7 +16,6 @@
   align-items: center;
 }
 .News {
-  /* background-color: blueviolet; */
   padding-bottom: 10px;
   display: flex;
   flex-direction: column;
@@ -24,8 +23,6 @@
   align-items: center;
 }
 .news-text {
-  /* background-color: blueviolet; */
-  /* width: 100%; */
   font-family: Antonio;
   display: flex;
   flex-direction: column;
@@ -34,7 +31,6 @@
   justify-content: center;
 }
 .crypto-news {
-  /* background-color: aquamarine; */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -47,7 +43,6 @@
   justify-content: center;
 }
 .sliderContainer {
-  /* background-color: aquamarine; */
   height: auto;
   width: 50vw;
 }
@@ -58,9 +53,10 @@
   align-items: center;
 }
 /* -------------------------------------------------------------------- */
+/* ------------------------------------------------------------------ */
+/* Slider arrow design*/
 .slick-prev,
 .slick-next {
-  /* background-color: #f2f2f2; */
   z-index: 10;
   /* ------------------------------------------------------ */
   cursor: pointer;
@@ -70,18 +66,14 @@
   color: white;
   font-weight: bold;
   top: 50%;
-  /* font-size: 0.9vw; */
   transition: 0.6s ease;
   border-radius: 50px;
   user-select: none;
-  /* box-shadow: 0px 4px 4px 2px #aaa; */
 }
 .slick-prev {
-  /* background-color: sienna; */
   left: 30px;
 }
 .slick-next {
-  /* background-color: darkgoldenrod; */
   right: 30px;
 }
 .slick-prev:hover,
@@ -101,11 +93,8 @@
 .slick-dots {
   margin: 0;
   padding: 0px 0px;
-  /* background-color: seagreen; */
 }
 .slick-dots li button:before {
-  /* background-color: blueviolet; */
-  /* margin-top: 10px; */
   font-family: "slick";
   font-size: 10px;
   line-height: 20px;
@@ -122,7 +111,6 @@
 }
 /* --------------------------------------------------------------------------------------- */
 .overlay {
-  /* background-color: aquamarine; */
   height: 100%S;
   position: absolute;
   margin: 20px 20px;
@@ -134,10 +122,11 @@
 }
 
 /* ------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------ */
+/* Responsiveness*/
 @media only screen and (min-width: 1360px) {
   /* For tablets: */
   .news-text {
-    /* background-color: skyblue; */
     width: 1250px;
   }
 }
@@ -146,14 +135,12 @@
     height: 400px;
   }
   .newsContainer {
-    /* background-color: lightgreen; */
     height: 100%;
   }
   .news-text {
     width: 77%;
   }
   .sliderContainer {
-    /* background-color: green; */
     width: 80%;
   }
   .overlay {
@@ -166,12 +153,10 @@
     width: 77%;
   }
   .newsContainer {
-    /* background-color: lightpink; */
     height: 400px;
     width: 100%;
   }
   .sliderContainer {
-    /* background-color: pink; */
     width: 80%;
   }
   .overlay {
@@ -185,12 +170,10 @@
     width: 85%;
   }
   .newsContainer {
-    /* background-color: red; */
     height: 360px;
     width: 100%;
   }
   .sliderContainer {
-    /* background-color: brown; */
     width: 90%;
   }
   .overlay {
@@ -204,16 +187,17 @@
     width: 85%;
   }
   .newsContainer {
-    /* background-color: orange; */
     height: 360px;
     width: 100%;
   }
   .sliderContainer {
-    /* background-color: yellow; */
     width: 90%;
   }
+}
+
+@media only screen and (max-width: 576px) {
   .overlay {
-    margin: 10px 10px;
-    font-size: 12px;
+    margin: 25px 40px;
+    font-size: 20px;
   }
 }

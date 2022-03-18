@@ -1,3 +1,5 @@
+/* ------------------------------------------------------------------ */
+/* Message container structure */
 .crypto__message {
   display: flex;
   flex-direction: column;
@@ -8,7 +10,6 @@
   background-color: white;
 }
 .crypto__message-content {
-  /* background-color: aqua; */
   width: 1000px;
   display: flex;
   justify-content: center;
@@ -16,7 +17,6 @@
   flex-direction: column;
 }
 .crypto__message-content h4 {
-  /* background-color: blue; */
   color: black;
   font-family: var(--font-family);
   margin: 20px 0px;
@@ -29,7 +29,6 @@
 }
 
 .crypto__message-content p {
-  /* background-color: gold; */
   color: black;
   font-family: garamond;
   font-weight: 400;
@@ -40,13 +39,14 @@
   align-items: center;
 }
 
+/* ------------------------------------------------------------------ */
+/* Responsiveness */
 @media screen and (max-width: 1300px) {
   .crypto__message {
     padding-top: 30px;
     padding-bottom: 30px;
   }
   .crypto__message-content {
-    /* background-color: aqua; */
     width: 80%;
   }
 

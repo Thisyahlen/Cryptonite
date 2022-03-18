@@ -1,3 +1,5 @@
+//---------------------------------------------------------------------------
+//imports
 import React from "react";
 import { useForm } from "react-hook-form";
 import Box from "@mui/material/Box";
@@ -12,10 +14,15 @@ import stone from "./stone.png";
 import coin from "./Cryptonite Logo (Gold).png";
 import ThumbUpOffAltIcon from "@mui/icons-material/ThumbUpOffAlt";
 import ThumbDownOffAltIcon from "@mui/icons-material/ThumbDownOffAlt";
+import { db } from "../../firebase";
+import { collection, addDoc } from "firebase/firestore";
+import { CryptoState } from "../../CryptoContext";
+import FormRating from "./FormRating";
 
+//---------------------------------------------------------------------------
+//Styling and responsiveness
 const useStyles = makeStyles((theme) => ({
   feedbackForm: {
-    // backgroundColor: "green",
     padding: "20px 0px 30px 0px",
   },
   stackCont: {
@@ -23,15 +30,12 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     [theme.breakpoints.up("xs")]: {
       width: "90%",
-      // backgroundColor: "red",
     },
     [theme.breakpoints.up("md")]: {
-      // backgroundColor: "pink",
       width: 600,
     },
   },
   feedbackTitle: {
-    // backgroundColor: "yellow",
     display: "flex",
     justifyContent: "center",
     fontFamily: "Antonio",
@@ -40,7 +44,6 @@ const useStyles = makeStyles((theme) => ({
   },
 
   feedbackText: {
-    // backgroundColor: "blue",
     display: "flex",
     justifyContent: "center",
     flexWrap: "wrap",
@@ -107,7 +110,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+//---------------------------------------------------------------------------
+//Feedback component structure
 export default function Feedback() {
+  //Variables and states
   const classes = useStyles();
   const { register, handleSubmit, formState } = useForm({
     mode: "onChange",
@@ -119,13 +125,37 @@ export default function Feedback() {
   const [dislike, setDislike] = useState("white");
   const [recommend, setRecommend] = useState();
   const [input, setInput] = useState();
+  const [feedbackform, setFeedbackform] = useState();
+  const { setAlert } = CryptoState();
+  // actions on the thumbs up/ thumbs down icon
+
+  const onEnterLike = (data) => {
+    if (like === "white") {
+      setLike("#99c26d");
+    }
+  };
+
+  const onEnterDislike = (data) => {
+    if (dislike === "white") {
+      setDislike("#ebaca2");
+    }
+  };
+
+  const onLeave = (data) => {
+    if (like === "#99c26d") {
+      setLike("white");
+    }
+    if (dislike === "#ebaca2") {
+      setDislike("white");
+    }
+  };
 
   const dynamicLike = () => {
-    if (like === "white" && dislike === "white") {
+    if (like === "#99c26d" && dislike === "white") {
       setLike("#66ff00");
       setRecommend("yes");
     }
-    if (like === "white" && dislike === "red") {
+    if (like === "#99c26d" && dislike === "red") {
       setLike("#66ff00");
       setDislike("white");
       setRecommend("yes");
@@ -136,11 +166,11 @@ export default function Feedback() {
     }
   };
   const dynamicDisLike = () => {
-    if (dislike === "white" && like === "white") {
+    if (dislike === "#ebaca2" && like === "white") {
       setDislike("red");
       setRecommend("no");
     }
-    if (dislike === "white" && like === "#66ff00") {
+    if (dislike === "#ebaca2" && like === "#66ff00") {
       setDislike("red");
       setLike("white");
       setRecommend("no");
@@ -148,26 +178,6 @@ export default function Feedback() {
     if (dislike === "red") {
       setDislike("white");
       setRecommend();
-    }
-  };
-  const onSubmit = (data) => {
-    if (
-      rating1 > 0 &&
-      rating2 > 0 &&
-      (like === "#66ff00" || dislike === "red") &&
-      input.length > 0
-    ) {
-      console.log(formdata);
-      alert(
-        "Thank you for the feedback! We appreciate your feedback and will continue to improve in the future."
-      );
-      setInput("");
-      setRating1(0);
-      setRating2(0);
-      setLike("white");
-      setDislike("white");
-    } else {
-      alert("Please complete the feedback form before submission!");
     }
   };
 
@@ -179,7 +189,47 @@ export default function Feedback() {
     feedback: input,
   };
 
+  // add new docs to firestore collection
+  const newForm = async () => {
+    const formRef = collection(db, "formlist");
+    try {
+      await addDoc(formRef, formdata);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  //to validate if user feedback form is complete
+  const onSubmit = () => {
+    if (
+      rating1 > 0 &&
+      rating2 > 0 &&
+      (like === "#66ff00" || dislike === "red") &&
+      input.length > 0
+    ) {
+      console.log(formdata);
+      setInput("");
+      setRating1(0);
+      setRating2(0);
+      setLike("white");
+      setDislike("white");
+      newForm();
+      setAlert({
+        open: true,
+        message: `Your feedback has been submitted. Thank You`,
+        type: "success",
+      });
+    } else {
+      setAlert({
+        open: true,
+        message: `Feedback submission error. Please make sure to fill all fields`,
+        type: "error",
+      });
+    }
+  };
+
   // const averageRating = formdata.uxRating + form
+
   return (
     <form className={classes.feedbackForm} onSubmit={handleSubmit(onSubmit)}>
       <Box
@@ -265,6 +315,8 @@ export default function Feedback() {
                 alignItems: "center",
                 cursor: "pointer",
               }}
+              onMouseEnter={onEnterLike}
+              onMouseLeave={onLeave}
               onClick={dynamicLike}
               className={classes.thumbsUp}
               value={recommend}
@@ -277,6 +329,8 @@ export default function Feedback() {
                 alignItems: "center",
                 cursor: "pointer",
               }}
+              onMouseOver={onEnterDislike}
+              onMouseLeave={onLeave}
               onClick={dynamicDisLike}
               className={classes.thumbsDown}
               value={recommend}

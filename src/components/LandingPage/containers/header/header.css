@@ -1,20 +1,15 @@
-/* .crypto__header {
-  display: flex;
-  background-image: url("../../../../media/topo.jpg");
-} */
+/* ------------------------------------------------------------------ */
+/* Header container structure */
 .crypto__header-content {
-  /* background-color: aqua; */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 .crypto__header-content h1 {
-  /* background-color: crimson; */
   width: 800px;
   font-family: antonio;
   font-weight: 400;
-  /* font-size: 50px; */
   line-height: 40px;
   letter-spacing: 8px;
   text-align: center;
@@ -22,7 +17,6 @@
   color: white;
 }
 .crypto__header-content p {
-  /* background-color: yellow; */
   width: 800px;
   padding: 20px 20px;
   font-family: garamond;
@@ -34,7 +28,7 @@
 }
 .crypto__header-content__input {
   width: 300px;
-  z-index: 3;
+  z-index: 5;
 }
 .crypto__header-content__input button {
   width: 100%;
@@ -76,20 +70,17 @@
 }
 
 /* ------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------ */
+/* Responsiveness */
 @media screen and (max-width: 900px) {
-  .crypto__header-content {
-    /* background-color: hotpink; */
-  }
   .crypto__header-image img {
     width: 80%;
   }
   .crypto__header-content h1 {
-    /* background-color: blue; */
     width: 80%;
     letter-spacing: 3px;
   }
   .crypto__header-content p {
-    /* background-color: indianred; */
     width: 80%;
   }
 }

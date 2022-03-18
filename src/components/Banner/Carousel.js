@@ -1,3 +1,5 @@
+//---------------------------------------------------------------------------
+//imports
 import axios from "axios";
 import { useEffect, useState } from "react";
 import AliceCarousel from "react-alice-carousel";
@@ -8,11 +10,15 @@ import { numberWithCommas } from "../Crypto/CoinsTable";
 import { CircularProgress } from "@material-ui/core";
 import { useStyles } from "./trendStyle.js";
 
+//---------------------------------------------------------------------------
+//Carousel componenet structure
 const Carousel = () => {
+  //Variables and states
   const [trending, setTrending] = useState([]);
   const [loading, setLoading] = useState(true);
   const { currency, symbol } = CryptoState();
 
+  //API call
   const fetchTrendingCoins = async () => {
     const { data } = await axios.get(TrendingCoins(currency));
     setLoading(false);
@@ -25,6 +31,7 @@ const Carousel = () => {
 
   const classes = useStyles();
 
+  //Mapping out data received into carousel
   const items = trending.map((coin) => {
     let profit = coin?.price_change_percentage_24h >= 0;
     //return a card with trending coin and details within the carousel
@@ -75,6 +82,7 @@ const Carousel = () => {
     },
   };
 
+  //carousel settings
   return (
     <div className={classes.carousel}>
       {loading ? (
@@ -101,4 +109,6 @@ const Carousel = () => {
   );
 };
 
+//---------------------------------------------------------------------------
+//export
 export default Carousel;

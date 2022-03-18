@@ -18,22 +18,52 @@ const Navbar = () => {
     <>
       {" "}
       <p>
-        <a href="#home">Home</a>
+        <a
+          href="javascript:document.getElementById('home').scrollIntoView(true);"
+          onClick={() => setToggleMenu(false)}
+        >
+          Home
+        </a>
       </p>
       <p>
-        <a href="#testament">Testament</a>
+        <a
+          href="javascript:document.getElementById('testament').scrollIntoView(true);"
+          onClick={() => setToggleMenu(false)}
+        >
+          Testament
+        </a>
       </p>
       <p>
-        <a href="#features">Features</a>
+        <a
+          href="javascript:document.getElementById('features').scrollIntoView(true);"
+          onClick={() => setToggleMenu(false)}
+        >
+          Features
+        </a>
       </p>
       <p>
-        <a href="#statistics">Statistics</a>
+        <a
+          href="javascript:document.getElementById('statistics').scrollIntoView(true);"
+          onClick={() => setToggleMenu(false)}
+        >
+          Statistics
+        </a>
       </p>
       <p>
-        <a href="#faq">FAQ</a>
+        <a
+          href="javascript:document.getElementById('faq').scrollIntoView(true);"
+          onClick={() => setToggleMenu(false)}
+        >
+          FAQ
+        </a>
       </p>
       <p>
-        <a href="#from-us">From us</a>
+        <a
+          href="javascript:document.getElementById('from-us').scrollIntoView(true);"
+          onClick={() => setToggleMenu(false)}
+        >
+          From us
+        </a>
       </p>
     </>
   );

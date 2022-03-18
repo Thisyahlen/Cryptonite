@@ -1,5 +1,10 @@
+//---------------------------------------------------------------------------
+//imports
 import React from "react";
 import "./faq.css";
+
+//---------------------------------------------------------------------------
+//FAQ container structure
 const FAQ = () => (
   <div className="crypto__FAQ " id="faq">
     <div className="crypto__FAQ-content">
@@ -12,4 +17,6 @@ const FAQ = () => (
   </div>
 );
 
+//---------------------------------------------------------------------------
+//export
 export default FAQ;

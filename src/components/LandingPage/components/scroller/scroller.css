@@ -109,3 +109,39 @@
     animation-timing-function: ease-out;
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .arrowButton {
+    padding-left: 5px;
+  }
+
+  .scrollToTop {
+    width: 12%;
+
+    height: 20px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .arrowButton {
+    padding-left: 10px;
+  }
+
+  .scrollToTop {
+    width: 12%;
+
+    height: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .arrowButton {
+    padding-left: 20px;
+  }
+
+  .scrollToTop {
+    width: 12%;
+
+    height: 20px;
+  }
+}

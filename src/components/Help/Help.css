@@ -1,3 +1,5 @@
+/* ------------------------------------------------------------------ */
+/* FAQ component structure */
 .FAQ-title {
   background-color: green;
   font-family: Antonio;
@@ -5,7 +7,6 @@
 }
 
 .accordion-list {
-  /* background-color: red; */
   padding-top: 10px;
   width: 100%;
   padding-left: 0px;

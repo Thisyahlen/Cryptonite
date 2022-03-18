@@ -55,7 +55,9 @@ const useStyles = makeStyles((theme) => ({
     borderBottomLeftRadius: 35,
     borderBottomRightRadius: 35,
     boxShadow: "0px 2px 2px 1px #aaa",
+    [theme.breakpoints.up("xs")]: { flexDirection: "column", flexWrap: "wrap" },
   },
+
   navLogo: {
     display: "flex",
     width: 380,
@@ -67,6 +69,10 @@ const useStyles = makeStyles((theme) => ({
       padding: 0,
       width: "40%",
       height: "100%",
+    },
+    [theme.breakpoints.down("xs")]: {
+      marginRight: 0,
+      width: "40%",
     },
   },
   title: {
@@ -113,12 +119,8 @@ const useStyles = makeStyles((theme) => ({
     flex: 1,
     width: 150,
     padding: "20px 20px 60px 20px",
-    [theme.breakpoints.up("md")]: {
-      display: "none",
-    },
   },
   burgerItem: {
-    // border: "#aaa",
     color: "#555",
     fontSize: 16,
     fontFamily: "Antonio",
@@ -145,9 +147,6 @@ const useStyles = makeStyles((theme) => ({
     "&:hover": {
       color: "#174f1a",
     },
-    [theme.breakpoints.up("md")]: {
-      display: "none",
-    },
   },
   // ----------------------------------------------------------------------------------
   loginBtn: {
@@ -157,6 +156,10 @@ const useStyles = makeStyles((theme) => ({
       display: "flex",
       justifyContent: "flex-end",
       margin: "0px 20px",
+      width: "50%",
+    },
+    [theme.breakpoints.down("xs")]: {
+      margin: "0px 10px",
       width: "50%",
     },
   },
@@ -268,6 +271,7 @@ const Header = () => {
               <FaBars
                 onClick={() => setOpenHamburger(!openHamburger)}
                 className={classes.hamburger}
+                id="hamburger"
               />
 
               {openHamburger && (

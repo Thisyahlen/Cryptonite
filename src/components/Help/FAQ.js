@@ -1,18 +1,20 @@
+//---------------------------------------------------------------------------
+//imports
 import React from "react";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import "./Help.css";
 import { makeStyles } from "@material-ui/core/styles";
-
 import Typography from "@material-ui/core/Typography";
 import Accordion from "@material-ui/core/Accordion";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
+//---------------------------------------------------------------------------
+//Styling and responsiveness
 const useStyles = makeStyles((theme) => ({
   faqTitle: {
-    // backgroundColor: "orange",
     fontFamily: "Antonio",
     fontWeight: 600,
     letterSpacing: 3,
@@ -39,7 +41,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   heading: {
-    // backgroundColor: "pink",
     fontSize: 22,
     lineHeight: 1,
     fontFamily: "Antonio",
@@ -53,7 +54,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   textBody: {
-    // backgroundColor: "yellow",
     padding: "20px 0px",
     fontFamily: "garamond",
     fontSize: 18,
@@ -62,21 +62,8 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "justify",
     width: "100%",
     whiteSpace: "pre-line",
-    // [theme.breakpoints.up("xs")]: {
-    //   // backgroundColor: "brown",
-    // },
-    // [theme.breakpoints.up("sm")]: {
-    //   // backgroundColor: "pink",
-    // },
-    // [theme.breakpoints.up("md")]: {
-    //   // backgroundColor: "green",
-    // },
-    // [theme.breakpoints.up("lg")]: {
-    //   // backgroundColor: "cyan",
-    // },
   },
   accordionSummary: {
-    // backgroundColor: "red",
     backgroundColor: "#fff",
     padding: "0px 40px",
     color: "black",
@@ -84,18 +71,18 @@ const useStyles = makeStyles((theme) => ({
   decorativeLine: {
     width: "100%",
     backgroundColor: "#eee",
-    // backgroundColor: "indigo",
     justifyContent: "center",
     height: 1,
   },
 }));
 
+//---------------------------------------------------------------------------
+//FAQ componenet structure
 export default function FAQ() {
   const classes = useStyles();
 
   return (
     <Box
-      // className="FAQ"
       sx={{
         display: "flex",
         flexWrap: "wrap",

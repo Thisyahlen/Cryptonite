@@ -121,6 +121,7 @@ const Signup = ({ handleClose }) => {
         variant="filled"
         label="Confirm Password"
         type="password"
+        id="confirm password"
         value={confirmPassword}
         onChange={(e) => setConfirmPassword(e.target.value)}
         fullWidth

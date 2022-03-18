@@ -1,3 +1,5 @@
+/* ------------------------------------------------------------------ */
+/* Feature container structure */
 .crypto__feature {
   display: flex;
   flex-direction: column;
@@ -5,7 +7,6 @@
   cursor: default;
 }
 .crypto__feature-box {
-  /* background-color: aqua; */
   display: flex;
   align-items: center;
   align-content: center;
@@ -42,16 +43,32 @@
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------ */
+/* Responsiveness */
 @media screen and (max-width: 900px) {
   .crypto__feature-box {
-    /* background-color: antiquewhite; */
     width: 100%;
   }
-  /* .crypto__feature h1 {
-    width: 80%;
+}
+
+@media screen and (max-width: 600px) {
+  .crypto__feature-box {
+    width: 100%;
   }
+
+  .crypto__feature-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .crypto__feature h1 {
+    width: 300px;
+  }
+
   .crypto__feature p {
-    width: 80%;
-  } */
+    width: 300px;
+  }
 }
 /* ------------------------------------------------------------------------------- */

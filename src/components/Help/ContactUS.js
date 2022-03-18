@@ -1,8 +1,8 @@
+//---------------------------------------------------------------------------
+//imports
 import React from "react";
-
 import Box from "@mui/material/Box";
 import "./Help.css";
-import { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 
 import Typography from "@material-ui/core/Typography";
@@ -11,9 +11,10 @@ import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import EmailIcon from "@mui/icons-material/Email";
 import ApartmentIcon from "@mui/icons-material/Apartment";
 
+//---------------------------------------------------------------------------
+//Styling and responsiveness
 const useStyles = makeStyles((theme) => ({
   title: {
-    // backgroundColor: "red",
     width: 1100,
     fontFamily: "Antonio",
     fontWeight: 600,
@@ -24,7 +25,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   subtitle: {
-    // backgroundColor: "green",
     width: 1100,
     fontFamily: "garamond",
     fontSize: 18,
@@ -34,7 +34,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   wrapIcon: {
-    // backgroundColor: "orange",
     width: 1100,
     display: "flex",
     alignItems: "center",
@@ -46,9 +45,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+//---------------------------------------------------------------------------
+//Contactus componenet structure
 export default function Contactus() {
-  // const [post, setPost] = useState([]);
-
+  //Variable
   const classes = useStyles();
 
   return (

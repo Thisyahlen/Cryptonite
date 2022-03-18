@@ -1,30 +1,27 @@
+//---------------------------------------------------------------------------
+//imports
 import { makeStyles } from "@material-ui/core";
 import WhiteCard from "../../media/card.png";
 
+//---------------------------------------------------------------------------
+//Styling and responsiveness
 const useStyles = makeStyles((theme) => ({
   //Banner
   bannerContent: {
-    // margin: 0,
-    // padding: 0,
-    // backgroundColor: "green",
-    // backgroundColor: "#f2f2f2",
     display: "flex",
     flexDirection: "column",
     paddingTop: 40,
     justifyContent: "space-around",
     alignItems: "center",
     [theme.breakpoints.up("xs")]: {
-      // backgroundColor: "red",
       height: 800,
       paddingTop: 40,
     },
     [theme.breakpoints.up("sm")]: {
-      // backgroundColor: "blue",
       height: 800,
       paddingTop: 40,
     },
     [theme.breakpoints.up("md")]: {
-      // backgroundColor: "yellow",
       height: 570,
     },
   },
@@ -34,58 +31,44 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     justifyContent: "center",
     backgroundImage: `url(${WhiteCard})`,
-    // backgroundColor: "red",
     borderRadius: 30,
-    // boxShadow: "0px 4px 4px 2px #aaa",
     marginTop: 40,
     marginBottom: 40,
     [theme.breakpoints.up("xs")]: {
-      backgroundColor: "brown",
       height: "75%",
       width: "90%",
     },
     [theme.breakpoints.up("sm")]: {
-      backgroundColor: "pink",
       height: "75%",
       width: "90%",
     },
     [theme.breakpoints.up("md")]: {
-      backgroundColor: "green",
       height: "65%",
       width: "80%",
     },
     [theme.breakpoints.up("lg")]: {
-      backgroundColor: "cyan",
       height: "90%",
       width: "80%",
     },
   },
   tagline: {
     marginTop: 5,
-    // backgroundColor: "pink",
     display: "flex",
     flexDirection: "column",
     [theme.breakpoints.up("xs")]: {
-      // marginTop: 10,
       width: "90%",
-      // height: "20%",
     },
     [theme.breakpoints.up("sm")]: {
-      // marginTop: 10,
       width: "90%",
-      // height: "17%",
     },
     [theme.breakpoints.up("md")]: {
       width: "80%",
-      // height: "17%",
     },
     [theme.breakpoints.up("lg")]: {
       width: "80%",
-      // height: "15%",
     },
   },
   trendTitle: {
-    // backgroundColor: "gray",
     fontWeight: "bold",
     fontFamily: "Antonio",
     color: "white",
@@ -93,13 +76,14 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 45,
     letterSpacing: 5,
     lineHeight: 1,
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 30,
+    },
   },
   trendTagline: {
-    // backgroundColor: "purple",
     paddingTop: 15,
     color: "white",
     fontweight: "light",
-    // textTransform: "capitalize",
     fontFamily: "garamond",
     lineHeight: 1,
     textAlign: "justify",
@@ -119,7 +103,6 @@ const useStyles = makeStyles((theme) => ({
   },
   //Carousel
   carousel: {
-    // backgroundColor: "gray",
     display: "flex",
     alignItems: "center",
 
@@ -146,7 +129,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   carouselItem: {
-    // backgroundColor: "pink",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
@@ -168,7 +150,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   coinImage: {
-    // backgroundColor: "white",
     display: "flex",
     flexDirection: "column",
     color: "white",
@@ -176,35 +157,29 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "flex-start",
 
     [theme.breakpoints.up("xs")]: {
-      // backgroundColor: "red",
       width: "auto",
       height: "auto",
     },
     [theme.breakpoints.up("sm")]: {
-      // backgroundColor: "green",
       width: "auto",
       height: "auto",
     },
     [theme.breakpoints.up("md")]: {
-      // backgroundColor: "orange",
       marginRight: 40,
       width: "auto",
       height: "35%",
     },
     [theme.breakpoints.up("lg")]: {
-      // backgroundColor: "gray",
       marginRight: 40,
       width: "auto",
       height: "40%",
     },
   },
   coinDetails: {
-    // backgroundColor: "orange",
     display: "flex",
     flexDirection: "column",
     textTransform: "uppercase",
     color: "white",
-    // paddingTop: 5,
 
     [theme.breakpoints.up("xs")]: {
       width: "100%",
@@ -230,7 +205,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   coinHighlight: {
-    // backgroundColor: "yellow",
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
@@ -239,7 +213,6 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
   },
   coinInfo: {
-    // backgroundColor: "green",
     display: "flex",
     flexDirection: "row",
     width: "100%",
@@ -258,7 +231,6 @@ const useStyles = makeStyles((theme) => ({
   },
   //Carousel Texts
   coinTitle: {
-    // backgroundColor: "cyan",
     margin: 10,
     fontWeight: 600,
     fontFamily: "Antonio",
@@ -279,7 +251,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   coinPrice: {
-    // backgroundColor: "white",
     fontWeight: 500,
     fontFamily: "Antonio",
     color: "black",
@@ -299,7 +270,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   coinChange: {
-    // backgroundColor: "gray",
     fontWeight: 600,
     fontFamily: "Antonio",
     marginRight: 5,
@@ -318,7 +288,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   volTitle: {
-    // backgroundColor: "indigo",
     width: "40%",
     marginLeft: 5,
     display: "flex",
@@ -326,53 +295,42 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Antonio",
 
     [theme.breakpoints.up("xs")]: {
-      // backgroundColor: "gray",
-      fontSize: 24,
+      fontSize: 18,
     },
     [theme.breakpoints.up("sm")]: {
-      // backgroundColor: "yellow",
       fontSize: 24,
     },
     [theme.breakpoints.up("md")]: {
-      // backgroundColor: "green",
       fontSize: 24,
     },
     [theme.breakpoints.up("lg")]: {
-      // backgroundColor: "cyan",
       fontSize: 30,
     },
   },
   coinVol: {
-    // backgroundColor: "gray",
     width: "60%",
     marginRight: 5,
     display: "flex",
     fontFamily: "Antonio",
     color: "black",
-    display: "flex",
     flexDirection: "row",
     justifyContent: "flex-end",
     alignItems: "center",
 
     [theme.breakpoints.up("xs")]: {
-      // backgroundColor: "gray",
-      fontSize: 24,
+      fontSize: 17,
     },
     [theme.breakpoints.up("sm")]: {
-      // backgroundColor: "yellow",
       fontSize: 24,
     },
     [theme.breakpoints.up("md")]: {
-      // backgroundColor: "green",
       fontSize: 24,
     },
     [theme.breakpoints.up("lg")]: {
-      // backgroundColor: "cyan",
       fontSize: 30,
     },
   },
   capitalTitle: {
-    // backgroundColor: "yellow",
     width: "40%",
     marginLeft: 5,
     display: "flex",
@@ -380,52 +338,42 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Antonio",
 
     [theme.breakpoints.up("xs")]: {
-      // backgroundColor: "gray",
-      fontSize: 24,
+      fontSize: 20,
     },
     [theme.breakpoints.up("sm")]: {
-      // backgroundColor: "yellow",
       fontSize: 24,
     },
     [theme.breakpoints.up("md")]: {
-      // backgroundColor: "green",
       fontSize: 24,
     },
     [theme.breakpoints.up("lg")]: {
-      // backgroundColor: "cyan",
       fontSize: 30,
     },
   },
   capital: {
-    // backgroundColor: "pink",
     width: "60%",
     marginRight: 5,
     display: "flex",
     fontFamily: "Antonio",
     color: "black",
-
-    display: "flex",
     flexDirection: "row",
     justifyContent: "flex-end",
     alignItems: "center",
-
     [theme.breakpoints.up("xs")]: {
-      // backgroundColor: "gray",
-      fontSize: 24,
+      fontSize: 17,
     },
     [theme.breakpoints.up("sm")]: {
-      // backgroundColor: "yellow",
       fontSize: 24,
     },
     [theme.breakpoints.up("md")]: {
-      // backgroundColor: "green",
       fontSize: 24,
     },
     [theme.breakpoints.up("lg")]: {
-      // backgroundColor: "cyan",
       fontSize: 30,
     },
   },
 }));
 
+//---------------------------------------------------------------------------
+//export
 export { useStyles };
